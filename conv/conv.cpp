@@ -68,7 +68,7 @@ int main(int argc, char * argv[]) {
             } else {
                 long long ind1 = stoll(ind11);
                 long long ind2 = stoll(ind12);
-                output_file << "e " << ind1 << " " << ind2 << " " << dist << " " << time << "\n";
+                output_file << "e " << ind1 - 1 << " " << ind2 - 1 << " " << dist << " " << time << "\n";
             }
         }
     }
