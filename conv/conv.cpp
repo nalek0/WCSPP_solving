@@ -5,13 +5,14 @@
 #include <cassert>
 
 int main(int argc, char * argv[]) {
-    assert(argc == 3);
+    assert(argc == 4);
     
     char * folder = argv[1];
-    char * output = argv[2];
-    std::ifstream coord_file(std::string(folder) + std::string("/coord.co"));
-    std::ifstream dist_file(std::string(folder) + std::string("/dist.gr"));
-    std::ifstream time_file(std::string(folder) + std::string("/time.gr"));
+    char * roadmap = argv[2];
+    char * output = argv[3];
+    std::ifstream coord_file(std::string(folder) + std::string(roadmap) + "/" + std::string("USA-road-d.") + std::string(roadmap) + std::string(".co"));
+    std::ifstream dist_file(std::string(folder) + std::string(roadmap) + "/" + std::string("USA-road-d.") + std::string(roadmap) + std::string(".gr"));
+    std::ifstream time_file(std::string(folder) + std::string(roadmap) + "/" + std::string("USA-road-t.") + std::string(roadmap) + std::string(".gr"));
     std::ofstream output_file(output);
 
     output_file << R"(# warthog xy graph

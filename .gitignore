@@ -1,0 +1,4 @@
+.vscode/
+map_converter
+convert/maps/gz/
+convert/maps/output/
